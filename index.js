@@ -46,7 +46,7 @@ application.use("/api/request" , requestController);
 application.use("/api/plasmaDonars" , plasmaDonarController);
 
 if (process.env.NODE_ENV === 'production') {
-    application.use(express.static('client/build'));
+    application.use(express.static('/client/build'));
   
     const path = require('path');
     application.get('*', (req,res) => {
